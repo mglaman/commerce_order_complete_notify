@@ -13,14 +13,14 @@ function commerce_order_complete_notify_default_message_type() {
     "arguments" : null,
     "message_text" : { "und" : [
         {
-          "value" : "Order completed @{message:message-commerce-order:order-number} at [site:name]",
-          "format" : null,
-          "safe_value" : "Order @{message:message-commerce-order:order-number} at [site:name]"
+          "value" : "Order @{message:message-commerce-order:order-number} at [site:name]!",
+          "format" : "filtered_html",
+          "safe_value" : "\u003Cp\u003EOrder @{message:message-commerce-order:order-number} at [site:name]!\u003C\/p\u003E\n"
         },
         {
-          "value" : "Thanks for your order @{message:message-commerce-order:order-number} at [site:name].\r\n\r\nIf this is your first order with us, you will receive a separate e-mail with login instructions. You can view your order history with us at any time by logging into our website at:\r\n\r\n[site:login-url]\r\n\r\nYou can find the status of your current order at:\r\n\r\n[message:message-commerce-order:view-url]\r\n\r\nPlease contact us if you have any questions about your order.",
+          "value" : "[message:message-commerce-order:site-logo]\r\n\r\nYour order @{message:message-commerce-order:order-number} at [site:name] has been completed! Thank you for your purchase, your order has been shipped and will arrive shortly.\r\n\r\nThank you for your business\r\n\r\n--  [site:name] team",
           "format" : "commerce_order_message",
-          "safe_value" : "Thanks for your order @{message:message-commerce-order:order-number} at [site:name].\n\nIf this is your first order with us, you will receive a separate e-mail with login instructions. You can view your order history with us at any time by logging into our website at:\n\n[site:login-url]\n\nYou can find the status of your current order at:\n\n[message:message-commerce-order:view-url]\n\nPlease contact us if you have any questions about your order."
+          "safe_value" : "[message:message-commerce-order:site-logo]\n\nYour order @{message:message-commerce-order:order-number} at [site:name] has been completed! Thank you for your purchase, your order has been shipped and will arrive shortly.\n\nThank you for your business\n\n--  [site:name] team"
         }
       ]
     },
