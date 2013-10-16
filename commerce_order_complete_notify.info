@@ -1,0 +1,9 @@
+name = Commerce Order Complete Notify
+description = Notifies customer's when their order has been marked as complete.
+package = Commerce (contrib)
+core = "7.x"
+dependencies[] = commerce_order
+dependencies[] = entityreference
+dependencies[] = entity_token
+dependencies[] = message
+dependencies[] = message_notify

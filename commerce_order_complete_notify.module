@@ -1,0 +1,11 @@
+<?php
+
+// Until Entity API can load this itself.
+require_once dirname(__FILE__) . '/includes/commerce_order_complete_notify.message.inc';
+
+/**
+ * Implements hook_flush_caches().
+ */
+function commerce_order_complete_notify_flush_caches() {
+  commerce_order_complete_notify_message_field_refresh();
+}
