@@ -13,14 +13,14 @@ function commerce_order_complete_notify_default_message_type() {
     "arguments" : null,
     "message_text" : { "und" : [
         {
-          "value" : "Order @{message:message-commerce-order:order-number} at [site:name]!",
+          "value" : "Order [message:message-commerce-order:order-number] at [site:name]!",
           "format" : "filtered_html",
-          "safe_value" : "\u003Cp\u003EOrder @{message:message-commerce-order:order-number} at [site:name]!\u003C\/p\u003E\n"
+          "safe_value" : "\u003Cp\u003EOrder [message:message-commerce-order:order-number] at [site:name]!\u003C\/p\u003E\n"
         },
         {
-          "value" : "[message:message-commerce-order:site-logo]\r\n\r\nYour order @{message:message-commerce-order:order-number} at [site:name] has been completed! Thank you for your purchase, your order has been shipped and will arrive shortly.\r\n\r\nThank you for your business\r\n\r\n--  [site:name] team",
+          "value" : "[site:site-logo]\r\n\r\nYour order @{message:message-commerce-order:order-number} at [site:name] has been completed! Thank you for your purchase, your order has been shipped and will arrive shortly.\r\n\r\nThank you for your business\r\n\r\n--  [site:name] team",
           "format" : "commerce_order_message",
-          "safe_value" : "[message:message-commerce-order:site-logo]\n\nYour order @{message:message-commerce-order:order-number} at [site:name] has been completed! Thank you for your purchase, your order has been shipped and will arrive shortly.\n\nThank you for your business\n\n--  [site:name] team"
+          "safe_value" : "[site:site-logo]\n\nYour order @{message:message-commerce-order:order-number} at [site:name] has been completed! Thank you for your purchase, your order has been shipped and will arrive shortly.\n\nThank you for your business\n\n--  [site:name] team"
         }
       ]
     },

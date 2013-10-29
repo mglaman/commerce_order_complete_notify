@@ -18,11 +18,12 @@ function commerce_order_complete_notify_default_rules_configuration() {
     "ON" : [ "commerce_order_presave" ],
     "IF" : [
       { "entity_is_of_type" : { "entity" : [ "commerce-order" ], "type" : "commerce_order" } },
+      { "NOT data_is_empty" : { "data" : [ "commerce-order:owner" ] } },
       { "NOT data_is" : { "data" : [ "commerce-order-unchanged:status" ], "value" : "completed" } },
       { "data_is" : { "data" : [ "commerce-order:status" ], "value" : "completed" } }
     ],
     "DO" : [
-      { "drupal_message" : { "message" : "Testing:\r\n\r\nUnsaved: [commerce-order-unchanged:order-number]\r\nSaved: [commerce-order:order-number]" } },
+      { "drupal_message" : { "message" : "Order notification has been sent" } },
       { "entity_create" : {
           "USING" : {
             "type" : "message",
